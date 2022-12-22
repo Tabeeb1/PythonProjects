@@ -1,0 +1,17 @@
+from turtle import Turtle, Screen
+import random
+
+colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray", "SeaGreen"]
+directions = [0, 90, 180, 270, 360]
+jimmy = Turtle()
+jimmy.speed(9)
+jimmy.shape("turtle")
+for i in range(0,100):
+    col = jimmy.pencolor(random.choice(colours))
+    jimmy.pensize(10)
+    jimmy.forward(40)
+    jimmy.left(random.choice(directions))
+
+
+screen = Screen()
+screen.exitonclick()
