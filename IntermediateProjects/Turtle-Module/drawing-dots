@@ -1,0 +1,33 @@
+import random
+import turtle
+from turtle import Turtle, Screen
+import colorgram
+turtle.colormode(255)
+
+def extraction():
+    llist = []
+    colors = colorgram.extract('color.jpg',20)
+    for item in colors:
+        r, g, b = item.rgb.r, item.rgb.g, item.rgb.b
+        color = (r,g,b)
+        llist.append(color)
+    return llist
+
+
+jimmy = Turtle()
+turtle.speed("fastest")
+turtle.penup()
+for item in range(0,10):
+    for color in range(0,10):
+        cur = extraction()
+        turtle.dot(20, random.choice(cur))
+        turtle.forward(50)
+    turtle.left(180)
+    turtle.forward(500)
+    turtle.right(90)
+    turtle.forward(50)
+    turtle.right(90)
+
+screen = Screen()
+screen.exitonclick()
+
