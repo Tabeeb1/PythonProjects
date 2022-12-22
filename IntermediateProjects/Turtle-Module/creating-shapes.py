@@ -58,6 +58,7 @@ def decagon():
 
 
 jimmy = Turtle()
+jimmy.shape("turtle")
 triangle()
 square()
 pentagon()
